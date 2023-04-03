@@ -1,0 +1,66 @@
+<!-- Make a layout template that contains a header and two paragraphs. Use float to line up the
+two paragraphs as columns side by side. Give the header and two paragraphs a border
+and/or a background color so you can see where they are. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>17</title>
+    <style>
+        *{
+            background-color: rgb(178, 189, 148);
+        }
+        header {
+            border: solid 2px rgb(0, 0, 0);
+            text-align: center;
+            font-size: 40px;
+            background-color: rgb(85, 153, 65);
+        }
+
+        p {
+            margin: auto;
+            
+            outline: groove rgb(62, 57, 57) 5px;
+            outline-offset: 6px;
+            box-sizing: border-box;
+            background-color: rgb(204, 207, 37);
+            /* for aligning side by side as column */
+            width: 40%;
+            height: 500px;
+            float: left;
+            padding: 20px 15px 20px 15px;
+            margin: 50px 40px 10px 40px;
+            font-size: 25px;
+            line-height: 1.5;
+            overflow: hidden;
+        }
+
+        p>img {
+            height: 100px;
+            width: 120px;
+            border-radius: 50%;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <header>MONUMENTS OF INDIA</header>
+    <p>
+        <img src="images/taj_mahal.jpg" height=250px alt="">
+        The Taj Mahal is an Islamic ivory-white marble mausoleum on the right bank of the river Yamuna in the Indian
+        city of Agra. It was commissioned in 1631 by the Mughal emperor Shah Jahan (1628-1658) to house the tomb of his
+        favourite wife, Mumtaz Mahal; it also houses the tomb of Shah Jahan himself. The tomb is the centrepiece of a
+        17-hectare complex, which includes a mosque and a guest house, and is set in formal gardens bounded on three
+        sides by a crenellated wall.
+    </p>
+    <p><img src="images/qutub_minar.jpg" height=250px alt="">
+        The Qutb Minar is a minaret and "victory tower" that forms part of the Qutb complex, which lies at the site of
+        Delhi's oldest fortified city, Lal Kot, founded by the Tomar Rajputs.It is a UNESCO World Heritage Site in the
+        Mehrauli area of South Delhi, India.It is one of the most visited tourist spots in the city, mostly built
+        between 1199 and 1220.
+       </p>
+</body>
+
+</html>

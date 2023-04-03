@@ -1,0 +1,62 @@
+<!-- 24. Create a Web page that accept a value in a text box for temperature in one unit and
+convert it to another. It should accept input in kelvin, Celsius, Fahrenheit and
+Convert accordingly.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>24</title>
+</head>
+
+<body>
+
+    <form action="" method="get">
+        <input type="number" onchange="solve()">
+
+        <select onchange="solve()">
+            <option>Celsius</option>
+            <option>Kelvin</option>
+            <option>Fahrenheit</option>
+        </select>
+<br>
+        <input type="number" id="convert">
+
+
+        <select onchange="solve()">
+            <option>Celsius</option>
+            <option>Kelvin</option>
+            <option>Fahrenheit</option>
+        </select>
+        <br> <br>
+
+
+    </form>
+    <button onClick="solve()">Submit</button>
+    <script>
+        function solve() {
+            input = parseInt(document.forms[0].elements[0].value);
+            inputC = document.forms[0].elements[1].value;
+            outputC = document.forms[0].elements[3].value;
+            if (inputC == "Celsius" && outputC == "Kelvin")
+                res = input + 273;
+            else if (inputC == 'Kelvin' && outputC == 'Celsius')
+                res = input - 273;
+            else if (inputC == 'Kelvin' && outputC == 'Fahrenheit')
+                res = (input - 273) * (9 / 5) + 32;
+            else if (inputC == 'Fahrenheit' && outputC == 'Kelvin')
+                res = (input - 32) * (5 / 9) + 273;
+            else if (inputC == 'Celsius' && outputC == 'Fahrenheit')
+                res = input * (9 / 5) + 32;
+            else if (inputC == 'Fahrenheit' && outputC == 'Celsius')
+                res = ((input * 5) - 32) / 9;
+            else
+                res = input;
+
+            document.forms[0].elements[2].value = res;
+            return true;
+        }
+    </script>
+</body>
+
+</html>

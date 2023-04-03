@@ -1,0 +1,105 @@
+<!-- 6. Create a webpage that displays your favourite quotations in a web page just above images.
+You have to use border, height, width, margin, padding, outline properties of CSS. Also use
+text and font properties to add effects in text to display quotations. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16</title>
+    <link href="16L.css" type="text/css" rel="stylesheet" />
+    <style>
+
+        .container {
+            flex-flow: row wrap;
+
+            width: 100%;
+            height: 100%;
+            border: solid 10px rgb(0, 0, 0);
+            /* make it flexible in border */
+            display: flex;
+            position: relative;
+            justify-content: space-around;
+            overflow:hidden;
+            /* background-color: rgb(41, 169, 219);; */
+            
+        }
+        
+        .container>div {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            border: solid 2px rgb(0, 0, 0);
+            margin: 30px 30px 50px 10px;
+            background-position: cover; 
+            overflow: hidden;
+            top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            outline-offset: 10px;
+
+        }
+
+        div>h3 {
+            color: rgb(151, 192, 76);
+            font-size: 30px;
+            position: absolute;
+            text-align: center;
+            /* right/-left bottom/-top shadowpower Shadowcolor */
+         
+        }
+
+        div>img {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            z-index: -5;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <img src="images/bg.jpg" alt="">
+        <div>
+            <h3 >Happiness is when what you think, what you say, and what you do are in harmony. </h3>
+            <img src="images/competition.jpg" alt="">
+        </div>
+
+        <div>
+            <h3 style="color:rgb(10, 9, 9)">In a gentle way, you can shake the world</h3>
+            <img src="images/world.png" alt="">
+        </div>
+        <div>
+            <h3 style="color:rgb(239, 129, 38)">The weak can never forgive. Forgiveness is the attribute of the strongs</h3>
+            <img src="images/forgive.jpg" alt="">
+        </div>
+        <div>
+            <h3 style="color:rgb(48, 16, 121)">An eye for an eye only ends up making the whole world blind.</h3>
+            <img src="images/eye.jpg" alt="">
+        </div>
+        <div>
+            <h3 style="color:rgb(14, 17, 14)">You must not lose faith in humanity. Humanity is an ocean; if a few drops of the ocean are dirty, the ocean does not become dirty.</h3>
+            <img src="images/humanity.jpg" alt="">
+        </div>
+        <div>
+            <h3 style="color:rgb(27, 4, 28);">The way to get started is to quit talking and begin doing..</h3>
+            <img src="images/doing.jpg" alt="">
+        </div>
+        <div>
+            <h3 style="color:rgb(192, 55, 144)">A room without books is like a body without a soul.</h3>
+            <img src="images/books.jpg" alt="">
+        </div>
+    </div>
+
+</body>
+
+</html>

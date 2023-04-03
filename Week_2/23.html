@@ -1,0 +1,92 @@
+<!-- Create a web page to display events in card layout. An event should have image,
+title, date and description fields. Store all these values in Javascript array or object
+for multiple events and generate dynamic cards for each events on webpage.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ques_23</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .contain {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .card {
+            width: 27%;
+            border: solid 2px black;
+            border-radius: 10%;
+            overflow: hidden;
+            box-shadow: 8px 10px 10px black;
+            background-color: rgb(36, 210, 30);
+            position: relative;
+            top: 20px;
+            left: 20px;
+            
+        }
+
+        .card>img {
+            width: 100%;
+            height: 60%;
+        }
+
+        .desc {
+            padding: 20px;
+        }
+
+        .desc>h2 {
+            color: rgb(20, 20, 20);
+            font-size: 20px;
+            
+        }
+
+        .desc>p {
+            color: rgb(28, 58, 8);
+            font-size: 10px;
+        }
+
+        .date {
+            width: 60%;
+            color: #000000;
+            font-size: 30px;
+            background-color: rgb(255, 255, 255);
+            opacity: 70%;
+            position: absolute;
+            top: 55%;
+            left: 30%;
+            transform: rotate(-5deg);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contain">
+        <script>
+
+            images = ["2.jpg", "4.jpg", "8.jpg"]
+            date = ["23 Dec", "28 Dec", "14 Jan"]
+            titles = ["Workshop", "Guest Lecture", "Annual Function"]
+            desc = ["DESC1", "desc2", "desc3"]
+
+            for (i = 0; i < 3; i++)
+            {
+                document.write('<div class="card">'
+                + '<img src="images/'+images[i]+'" alt="">'
+                + '<div class="date">'+date[i]+'</div>'
+                + '<div class="desc">'
+                + '<h2>'+titles[i]+'</h2>'
+                + '<p>'+desc[i]+'</p>'
+                + '</div>'
+                + '</div>');
+            }
+                
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- 26. Create a Webpage with two buttons start and stop. When user click on start button a
+timer should start to count seconds. When a user click on stop button then it should
+stop.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ques_26</title>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: yellowgreen;
+            color: black
+        }
+    </style>
+
+</head>
+<body>
+    <div id='timer1'></div>
+    <script type="text/javascript">
+        hr = 0;
+        function timer() {
+            hr += 1;
+
+            block = document.getElementById('timer1');
+            block.innerHTML = hr;
+        }
+    </script>
+
+    <button onclick="x=setInterval(timer, 1000);">Start</button>
+    <button onclick="clearInterval(x);">Stop</button>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!--9.	Create a user feedback page which asks questions about a software product. You are required to use checkbox, radio buttons, and drop-down, textarea and various text input type for this. Structure the web page using HTML table.-->
+<html>
+ 	<head>
+		<title> Feedback form </title>
+	</head>
+
+	<body>
+	<h2 align=center> <u><b>CUSTOMER FEEDBACK FORM </b></u></h2>
+	<h4> We would love to hear your thought,suggestions,concerns and problems with anything so we can improve </h4>
+	<form method=get>
+	<table>
+	<tr>
+	<td> <label> Username:</label></td>
+	<td><input type =text name=uname placeholder="Enter user name" size=50 /> </td>
+	</tr>
+
+	<tr>
+	<td><label> Email id :</label></td>
+	<td><input type =text name=uname placeholder="Enter mail id" size=50 /> </td>	
+	</tr>
+	<tr>
+	<td><label> Gender </label></td>
+	<td><input type =radio name=gender value="m" />Male </td>
+	<td><input type =radio name=gender value="f" /> Female</td>
+	</tr>
+	
+			<tr>
+			<td> <label> Which web browser do you know?: </label> </td>
+			<td> <input type=checkbox name="wb" value="Google Chrome"/>Google Chrome</td>
+			<td><input type=checkbox name="wb" value="Internet Explorer" /> Internet Explorer</td>
+			<td><input type=checkbox name="wb" value="Safari" /> Safari </td>
+			<td><input type=checkbox name="wb" value="Brave" /> Brave </td>
+			</tr>
+			
+			<tr>
+			<td></td>
+			<td>Worst</td>
+			<td>Good</td>
+			<td>Excellent</td>
+			</tr>
+
+			<tr>
+			<td> <label> Ease of installation: </label> </td>
+			<td> <input type=radio name="wb" value="a"> </td>
+			<td> <input type=radio name="wb" value="g" /> </td>
+			<td> <input type=radio name="wb" value="e" /> </td>
+			
+		</tr>
+	
+
+	<tr>
+	<td><label> Ease of use </label></td>
+	<td> <input type=radio name="wb" value="a"> </td>
+	<td> <input type=radio name="wb" value="g" /> </td>
+	<td> <input type=radio name="wb" value="e" /></td>	
+	</tr>
+
+	<tr>
+	<td><label> Hardware compatibility </label></td>
+	<td> <input type=radio name="wb" value="a">  </td>
+	<td> <input type=radio name="wb" value="g" /></td>
+	<td> <input type=radio name="wb" value="e" /></td>
+	</tr>
+
+	<tr>
+	<td> <label> Which is the fastest? </label> </td>
+	<td> <select name="efficiency" >
+			<option value="O"> Google Chrome </option>
+			<option value="A"> Brave </option>
+			<option value="B"> Safari </option>
+			<option value="C"> Internet Explorer </option>
+			</select> </td>
+	</tr>
+
+	<tr>
+		<td> Please mention any other things to be imporoved: </label> </td>
+		<td> <textarea row=2 cols=30 name="comments" placeholder="comment"></textarea> </td>
+	</tr
+		<tr>
+			<td> <input type=submit /> </td>
+			<td></td>
+		</tr>
+
+		</table>
+		</form>
+	</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!-- 22. Implement a Javascript function that accept number of rows(m) and columns(n) from user and displays a 2D m x n square layout
+ of alternate colors black and red.  -->
+<!-- CHESS DESIGN -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            width:fit-content;
+            border: double 3px rgb(29, 22, 22);
+        }
+.inner1{
+    height: 100px;
+    width:100px;
+    /* background-image: url("20_logo.png");
+    background-size: cover; */
+    background-color: black;
+}
+.inner2{
+    height: 100px;
+    width:100px;
+    background-color: white;
+}
+.inner1:hover{
+    background-color: rgb(221, 212, 212);
+}
+.inner2:hover{
+     background-color: rgb(240, 236, 28);
+}
+        
+    </style>
+</head>
+
+<body>
+    <script>
+        m = parseFloat(prompt("Enter row "));
+        n = parseFloat(prompt("Enter column "));
+        for(i=0;i<m;i++)
+        {
+            document.write(" <div class='container'>");
+            for(j=0;j<n;j++)
+            {
+                if((i+j)%2==0)
+                    document.write(" <div class='inner1'></div>");
+                else
+                document.write(" <div class='inner2'></div>");
+            }
+            document.write(" </div>");
+        }
+
+    </script>
+</body>
+
+</html>

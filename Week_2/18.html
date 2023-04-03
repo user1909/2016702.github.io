@@ -1,0 +1,156 @@
+<!-- 18. Create an infinite animation of an element moving in a square pattern. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <style>
+        body{
+            background-color: rgb(212, 209, 29);
+        }
+        .container{
+            height:500px;
+            width: 500px;
+            background-color: rgb(169, 220, 106);
+            
+           margin: 70px 0px 0px 400px;
+           border: solid 3px black;
+        }
+        .container>div{
+        height: 50px;
+        width: 50px;
+        background-color: rgb(34, 159, 168);
+        float: left;
+        margin:20px 20px;
+        position: relative;
+        
+        }
+        #d1{
+            animation-name: animat1;
+            animation-duration: 5s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            /* animation-direction: alternate; */
+        }
+        #d2{
+            animation-name: animat2;
+            animation-duration: 5s;
+            animation-delay: 0.5s;
+            animation-iteration-count: infinite;
+            /* animation-direction: alternate; */
+        }
+        #d3{
+            animation-name: animat3;
+            animation-duration: 5s;
+            /* animation-delay: ; */
+            animation-iteration-count: infinite;
+            /* animation-direction: alternate; */
+        }
+        @keyframes animat3
+        {
+            from{
+                    top: -50px;
+                    left:-40px;
+                    /* transform:rotate(0deg); */
+                    text-shadow: 0 0 2px red;
+            }
+            25%{
+                top:-50px;
+                    left:275px;
+            }
+            50%{
+                top:450px;
+                left: 275px;
+                /* transform:rotate(180deg); */
+                text-shadow: 50 1000 5px rgb(36, 3, 3);
+            }
+            75%{
+                top:450px;
+                left:-250px;
+                /* transform:rotate(180deg); */
+                text-shadow: 50 1000 5px rgb(36, 3, 3);
+            }
+            to{
+                top: -50px;
+                    left:-250px;
+                /* transform:rotate(180deg); */
+                text-shadow: 50 1000 5px rgb(36, 3, 3);
+            }
+        }
+
+        @keyframes animat2
+        {
+            from{
+                    top: -50px;
+                    left:0px;
+                    /* transform:rotate(0deg); */
+                    text-shadow: 0 0 2px red;
+            }
+            25%{
+                top:-50px;
+                    left:360px;
+            }
+            50%{
+                top:450px;
+                left: 360px;
+                /* transform:rotate(180deg); */
+                text-shadow: 50 1000 5px rgb(36, 3, 3);
+            }
+            75%{
+                top:450px;
+                left:-150px;
+                /* transform:rotate(180deg); */
+                text-shadow: 50 1000 5px rgb(36, 3, 3);
+            }
+            to{
+                top: -50px;
+                    left:-150px;
+                /* transform:rotate(180deg); */
+                text-shadow: 50 1000 5px rgb(36, 3, 3);
+            }
+        }
+        @keyframes animat1
+        {
+            from{
+                    top: -50px;
+                    left:-40px;
+                    /* transform:rotate(0deg); */
+                    text-shadow: 0 0 2px red;
+            }
+            25%{
+                top:-50px;
+                    left:450px;
+            }
+            50%{
+                top:450px;
+                left: 450px;
+                /* transform:rotate(180deg); */
+                text-shadow: 50 1000 5px rgb(36, 3, 3);
+            }
+            75%{
+                top:450px;
+                left:-50px;
+                /* transform:rotate(180deg); */
+                text-shadow: 50 1000 5px rgb(36, 3, 3);
+            }
+            to{
+                top: -50px;
+                    left:-40px;
+                /* transform:rotate(180deg); */
+                text-shadow: 50 1000 5px rgb(36, 3, 3);
+            }
+        }
+    </style>
+    
+    <title>Animation</title>
+</head>
+<body>
+    <div class="container">
+        <div id="d1">1</div>
+        <div id="d2">2</div> 
+        <div id="d3">3</div> 
+        
+    </div>
+    
+</body>
+</html>
